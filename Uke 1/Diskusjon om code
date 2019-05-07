@@ -1,0 +1,3 @@
+Koden ser relativit lik ut. Konstruktørene er ganske like, følger basic oppsett bare at de la inn en liste i stand konstruktøren.
+Ellers så er alt ganske likt de vanlige set og get metoder er laget samme som våres. Utenom det er metoden for Vote generert anerledes.
+De bruker boolean og bruker det til å lage stemmevekt osv... mens vi brukte EntityManager og query i stedet for boolean metoder på alt annet.
