@@ -1,0 +1,1 @@
+Koden som blir generert inneholder mye flere metoder som vi ikke har brukt. For eksempel implementerte vi aldri en metode for delete i stand og vote

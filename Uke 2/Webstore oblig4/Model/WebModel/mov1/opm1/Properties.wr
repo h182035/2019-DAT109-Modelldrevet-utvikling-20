@@ -1,0 +1,8 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#opm1" name="emptycart">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov1#opm1#icu1" name="Input Port">
+      <OKLink id="mov1#opm1#icu1#oln1" to="mov1#opm1#miu3" validate="true" name="Empty"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#opm1#miu3" name="Empty the cart" gr:x="300" gr:y="0" action="true"/>
+  </OperationUnits>
+</OperationModule>

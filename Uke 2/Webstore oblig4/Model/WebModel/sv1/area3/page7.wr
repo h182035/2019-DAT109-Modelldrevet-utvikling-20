@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area3#page7" name="Shopping cart">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area3#page7#pwu6" name="Product List" sortable="true" checkable="false" useCountQuery="false" entity="ent2" linkOrder="sv1#area3#page7#pwu6#ln5 sv1#area3#page7#pwu6#ln8">
+      <Link id="sv1#area3#page7#pwu6#ln5" name="Empty" to="sv1#area3#miu2" type="normal" validate="true"/>
+      <Link id="sv1#area3#page7#pwu6#ln8" name="Flow8" to="sv1#area3#miu4" type="normal" validate="true" gr:bendpoints="185,4,-130,49">
+        <LinkParameter id="sv1#area3#page7#pwu6#ln8#par11" name="quantity_PASSING" source="data[].ent2#att5" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page7#pwu6">
+          <layout:Link link="sv1#area3#page7#pwu6#ln5"/>
+          <layout:Link link="sv1#area3#page7#pwu6#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

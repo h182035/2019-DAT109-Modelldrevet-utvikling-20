@@ -1,0 +1,118 @@
+//%% NEW FILE Expo BEGINS HERE %%
+
+
+/*PLEASE DO NOT EDIT THIS CODE*/
+/*This code was generated using the UMPLE 1.29.1.4450.6749b7105 modeling language!*/
+
+// UML state machine digram for a Garage door, written in Umple
+// See also the YouTube video http://www.youtube.com/watch?v=mFczzVkTZ9g
+class Expo
+{
+
+  //------------------------
+  // MEMBER VARIABLES
+  //------------------------
+
+  //Expo State Machines
+  private static $StatusHovedside = 1;
+  private static $StatusListOfStands = 2;
+  private static $StatusStemPaStand = 3;
+  private static $StatusConfirmation = 4;
+  private static $StatusResults = 5;
+  private $status;
+
+  //------------------------
+  // CONSTRUCTOR
+  //------------------------
+
+  public function __construct()
+  {
+    $this->setStatus(self::$StatusHovedside);
+  }
+
+  //------------------------
+  // INTERFACE
+  //------------------------
+
+  public function getStatusFullName()
+  {
+    $answer = $this->getStatus();
+    return $answer;
+  }
+
+  public function getStatus()
+  {
+    if ($this->status == self::$StatusHovedside) { return "StatusHovedside"; }
+    elseif ($this->status == self::$StatusListOfStands) { return "StatusListOfStands"; }
+    elseif ($this->status == self::$StatusStemPaStand) { return "StatusStemPaStand"; }
+    elseif ($this->status == self::$StatusConfirmation) { return "StatusConfirmation"; }
+    elseif ($this->status == self::$StatusResults) { return "StatusResults"; }
+    return null;
+  }
+
+  public function VisStands()
+  {
+    $wasEventProcessed = false;
+    
+    $aStatus = $this->status;
+    if ($aStatus == self::$StatusHovedside)
+    {
+      $this->setStatus(self::$StatusListOfStands);
+      $wasEventProcessed = true;
+    }
+    return $wasEventProcessed;
+  }
+
+  public function VisResultat()
+  {
+    $wasEventProcessed = false;
+    
+    $aStatus = $this->status;
+    if ($aStatus == self::$StatusHovedside)
+    {
+      $this->setStatus(self::$StatusResults);
+      $wasEventProcessed = true;
+    }
+    return $wasEventProcessed;
+  }
+
+  public function VelgStand()
+  {
+    $wasEventProcessed = false;
+    
+    $aStatus = $this->status;
+    if ($aStatus == self::$StatusListOfStands)
+    {
+      $this->setStatus(self::$StatusStemPaStand);
+      $wasEventProcessed = true;
+    }
+    return $wasEventProcessed;
+  }
+
+  public function StemVekt()
+  {
+    $wasEventProcessed = false;
+    
+    $aStatus = $this->status;
+    if ($aStatus == self::$StatusStemPaStand)
+    {
+      $this->setStatus(self::$StatusConfirmation);
+      $wasEventProcessed = true;
+    }
+    return $wasEventProcessed;
+  }
+
+  private function setStatus($aStatus)
+  {
+    $this->status = $aStatus;
+  }
+
+  public function equals($compareTo)
+  {
+    return $this == $compareTo;
+  }
+
+  public function delete()
+  {}
+
+}
